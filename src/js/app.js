@@ -6,7 +6,8 @@ ReactDOM.render(
   <div>
     <h1>Boilerplate</h1>
     <ul>
-      <li>ReactJS</li>
+      <li>reactJS</li>
+      <li>react-router</li>
       <li>SCSS</li>
     </ul>
   </div>,

@@ -6,7 +6,7 @@ var extractPlugin = new ExtractTextPlugin({
 });
 
 module.exports = {
-  entry: './src/js/app.jsx',
+  entry: './src/js/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -15,7 +15,8 @@ module.exports = {
   module: {
       rules: [
         {
-          test: /\.jsx$/,
+          test: /\.js$/,
+          exclude: /node_modules/,
           use: [
             {
               loader: 'babel-loader',
@@ -27,6 +28,7 @@ module.exports = {
         },
         {
           test: /\.scss$/,
+          exclude: /node_modules/,
           use: extractPlugin.extract({
             use: ['css-loader', 'sass-loader']
           })
